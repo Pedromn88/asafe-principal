@@ -1,0 +1,33 @@
+{
+  "name": "Prubea Asafe",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run"
+  },
+  "dependencies": {
+    "@module-federation/nextjs-mf": "^6.2.1",
+    "@next/third-parties": "^14.1.4",
+    "autoprefixer": "^10.4.14",
+    "chart.js": "^4.4.2",
+    "firebase": "^10.10.0",
+    "firebase-admin": "^11.11.1",
+    "next": "13.2.4",
+    "next-auth": "^4.24.7",
+    "postcss": "^8.4.25",
+    "react": "18.2.0",
+    "react-datepicker": "^6.6.0",
+    "react-dom": "18.2.0",
+    "reflect-metadata": "^0.1.13",
+    "tailwindcss": "^3.3.2",
+    "webpack": "^5.76.3"
+  },
+  "devDependencies": {
+    "cypress": "^13.7.2"
+  }
+}
