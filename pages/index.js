@@ -5,7 +5,10 @@ import Dashboard from "../components/layouts/Dashboard";
 import styles from "../styles/Home.module.css";
 import dynamic from "next/dynamic";
 
-const Footer = lazy(() => import("micro/footer"));
+const Footer = lazy(() => import("micro/footer")).catch(() => {
+  console.error("No se pudo cargar Footer.");
+  return () => null;
+});
 
 export default function Home({ session }) {
   const GAnalyticsLoader = dynamic(() =>
