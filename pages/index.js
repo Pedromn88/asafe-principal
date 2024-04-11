@@ -10,7 +10,7 @@ const Footer = lazy(() => import("micro/footer"));
 export default function Home({ session }) {
   const GAnalyticsLoader = dynamic(() =>
     import("micro/analytics").catch(() => {
-      console.warn("No se pudo cargar Google Analytics.");
+      console.error("No se pudo cargar Google Analytics.");
       return () => null;
     })
   );
