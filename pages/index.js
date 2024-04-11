@@ -1,9 +1,9 @@
-import { lazy } from "react";
+import { lazy, useEffect, useState } from "react";
+import { getSession } from "next-auth/react";
 import Login from "../components/layouts/login";
 import Dashboard from "../components/layouts/Dashboard";
 import styles from "../styles/Home.module.css";
 import dynamic from "next/dynamic";
-import { getServerSession } from "next-auth";
 
 const Footer = lazy(() => import("micro/footer"));
 
@@ -35,7 +35,7 @@ export default function Home({ session }) {
 Home.requireAuth = true;
 
 export async function getServerSideProps(ctx) {
-  const session = await getServerSession(ctx);
+  const session = await getSession(ctx);
 
   return {
     props: { session },
