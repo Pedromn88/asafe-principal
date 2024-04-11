@@ -3,7 +3,7 @@ const { NextFederationPlugin } = require("@module-federation/nextjs-mf");
 const remotes = (isServer) => {
   const location = isServer ? "ssr" : "chunks";
   return {
-    micro: `micro@http://localhost:3001/_next/static/${location}/remoteEntry.js`,
+    micro: `micro@https://asafemicro.netlify.app/_next/static/${location}/remoteEntry.js`,
   };
 };
 const nextConfig = {
