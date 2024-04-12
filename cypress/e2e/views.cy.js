@@ -1,7 +1,7 @@
 describe("Pruebas del encabezado", () => {
   beforeEach(() => {
     // Visitar la página donde está el encabezado
-    cy.visit("http://localhost:3000/");
+    cy.visit("/");
   });
 
   it("Debería encontrar y hacer clic en el elemento Home", () => {

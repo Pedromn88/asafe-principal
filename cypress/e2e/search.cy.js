@@ -1,11 +1,9 @@
 describe("Pruebas de búsqueda de datos", () => {
   beforeEach(() => {
-    cy.visit("http://localhost:3000/");
+    cy.visit("/ ");
   });
-
   it("Debería hacer clic en #header-data, esperar a que se abra el componente Dataviews y realizar acciones", () => {
     cy.get("#header-data").should("exist").click();
-
     cy.get("#views-container")
       .should("exist")
       .then(() => {
